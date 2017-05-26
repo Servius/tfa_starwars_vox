@@ -1,26 +1,25 @@
 TFAVOX_Models = TFAVOX_Models or {}
 
-
 local  model = {"",
-	         "",
-	         "",
-	         "",
-             "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-	         "",
-             "",
-             "",
-             "",
-             "",
-             ""
+	         	"",
+	        	"",
+	         	"",
+             	"",
+	        	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+	         	"",
+             	"",
+             	"",
+             	"",
+             	"",
+             	""
              }
 
 
@@ -65,8 +64,7 @@ TFAVOX_Models[model] = {
 			['sound'] = TFAVOX_GenerateSound( mdlprefix, "crithealth", { "snd1", "snd2", "snd3" } )
 		},
 		['death'] = {
-			['delay']= nil,
-			['sound'] = TFAVOX_GenerateSound( mdlprefix, "death", { "death_screams/death_scream1.wav", "snd2", "snd3" } )
+			['sound'] = 'TFA_VOX_CLONE.PlayerDeath'
 		},
 		['spawn'] = {
 			['delay']= nil,
@@ -295,3 +293,18 @@ TFAVOX_Models[model] = {
 		}
 	}
 }
+
+
+sound.Add( {
+	name = "TFA_VOX_CLONE.PlayerDeath",
+	channel = CHAN_AUTO,
+	volume = 1,
+	level = SNDLVL_TALKING,
+	pitch = PITCH_NORM,
+	sound = { "clone_sounds/death/RICOM401.wav",
+		      "clone_sounds/death/RICOM402.wav",
+		      "clone_sounds/death/RICOM403.wav",
+		      "clone_sounds/death/RICOM404.wav",
+		      "clone_sounds/death/RICOM405.wav",
+		      "clone_sounds/death/RICOM406.wav" }
+} )
